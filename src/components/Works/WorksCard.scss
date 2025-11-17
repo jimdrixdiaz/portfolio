@@ -1,0 +1,23 @@
+.work-card {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.work-subtitle {
+    font-weight: 600;
+}
+
+.work-details {
+    margin: 10px 0;
+}
+
+.work-preview {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+    height: calc(100% - 90px);
+    
+    & img {
+	    width: 100%;
+    }
+}

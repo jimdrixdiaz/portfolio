@@ -1,4 +1,7 @@
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     margin: 0;
     border-radius: 7px;
@@ -6,10 +9,26 @@ button {
     background-color: rgb(239, 239, 239, 0.8);
     font-size: 0.9rem;
     font-weight: 500;
+    color: #242424;
     cursor: pointer;
     @include transition(background-color 0.3s ease-in-out);
 
     &:hover {
         background-color: rgb(239, 239, 239, 1);
+    }
+}
+
+.button-icon {
+    margin-right: 10px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #242424
+    }
+
+    a {
+        color: #242424;
+        text-decoration: none;
     }
 }

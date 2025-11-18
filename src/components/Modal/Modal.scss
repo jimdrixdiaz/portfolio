@@ -1,0 +1,106 @@
+.modal {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin: 50px auto;
+
+    .modal-close {
+        position: absolute;
+        z-index: 10;
+        top: 17px;
+        right: 16px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 14px;
+        color: #EFEFEF;
+        background: transparent;
+        transform: rotate(45deg);
+        opacity: 0.6;
+        @include transition(transform 0.3s);
+
+        &:hover {
+            opacity: 1;
+            transform: rotate(135deg);
+        }
+    }
+
+    &-header {
+        position: relative;
+        padding: 30px 80px;
+
+        @include mobile {
+            padding: 30px 40px;
+        }
+    }
+
+    &-body {
+        position: relative;
+        width: calc(100% - 2px);
+        padding: 30px 80px;
+        border-radius: 15px;
+        transform: translateX(1px);
+        background-color: rgba(0, 0, 0, .3);
+
+        @include mobile {
+            padding: 30px 40px;
+        }
+    }
+}
+
+.modal-view-enter {
+  opacity: 0;
+//   transform: scale(1.2);
+}
+.modal-view-enter-active {
+  opacity: 1;
+//   transform: translateX(0);
+  @include transition(opacity 0.3s ease-in-out);
+}
+.modal-view-exit {
+  opacity: 1;
+}
+.modal-view-exit-active {
+  opacity: 0;
+//   transform: scale(1.2);
+  @include transition(opacity 0.3s ease-in-out);
+}
+
+
+.profile-modal-header {
+    position: relative;
+
+    .profile-bio {
+        position: relative;
+        z-index: 2;
+    }
+
+    .profile-quote {
+        font-size: 16px;
+        font-style: italic;
+        margin: 18px 0;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    }
+
+    .profile-pic {
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        height: 110%;
+        z-index: 1;
+    }
+}
+
+.modal-body {
+    p {
+        margin: 20px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
